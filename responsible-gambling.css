@@ -1,0 +1,308 @@
+/* Custom Scrollbar Styles */
+html, body {
+    --scrollbarBG: rgba(10, 25, 47, 0.95);
+    --scrollbarThumb: var(--secondary-color);
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--scrollbarThumb) var(--scrollbarBG) !important;
+}
+
+/* Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px !important;
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbarBG) !important;
+    border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #0099ff 100%) !important;
+    border-radius: 10px !important;
+    border: 2px solid var(--scrollbarBG) !important;
+    transition: all 0.3s ease !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #0099ff 0%, var(--secondary-color) 100%) !important;
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.5) !important;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--scrollbarThumb) var(--scrollbarBG) !important;
+}
+
+/* Edge specific */
+@supports (-ms-overflow-style: none) {
+    html {
+        scrollbar-width: thin !important;
+        -ms-overflow-style: -ms-autohiding-scrollbar !important;
+    }
+}
+
+.responsible-gambling-page {
+    padding-top: 80px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.95), rgba(26, 54, 93, 0.95));
+}
+
+.page-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.98), rgba(26, 54, 93, 0.98));
+    border-bottom: 2px solid var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(0, 247, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
+    position: relative;
+}
+
+.page-header .subtitle {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.content-section {
+    padding: 4rem 0;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-section {
+    background: rgba(0, 247, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    text-align: center;
+    border: 2px solid var(--secondary-color);
+}
+
+.video-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.info-card {
+    background: rgba(0, 247, 255, 0.1);
+    border: 2px solid var(--secondary-color);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.card-header h2 {
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.registration-info, .privacy-notice, .registration-process, 
+.important-notice, .data-protection {
+    margin-bottom: 3rem;
+}
+
+.registration-info h2, .privacy-notice h2, .registration-process h2,
+.important-notice h2, .data-protection h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.registration-info ul, .privacy-notice ul, .important-notice ul,
+.data-protection ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.registration-info ul li, .privacy-notice ul li, .important-notice ul li,
+.data-protection ul li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.registration-info ul li::before, .privacy-notice ul li::before,
+.important-notice ul li::before, .data-protection ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step {
+    background: rgba(0, 247, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 247, 255, 0.3);
+}
+
+.step i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.step h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.step p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.contact-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.contact-item p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.action-button {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 247, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .page-header .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .intro-text {
+        font-size: 1.1rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .action-button {
+        width: 100%;
+        justify-content: center;
+    }
+} 

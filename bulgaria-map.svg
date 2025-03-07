@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="600" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .region {
+            fill: #FFE4B5;
+            stroke: #0a192f;
+            stroke-width: 2;
+            transition: all 0.3s ease;
+        }
+        .region-dark {
+            fill: #8B0000;
+            stroke: #0a192f;
+            stroke-width: 2;
+        }
+        .region-name {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            fill: #000;
+            font-weight: bold;
+        }
+        .dark-region-name {
+            fill: #90EE90;
+            font-weight: bold;
+        }
+        .marker {
+            fill: #00f7ff;
+            filter: drop-shadow(0 0 5px rgba(0, 247, 255, 0.8));
+            animation: markerPulse 2s infinite;
+        }
+        @keyframes markerPulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+
+    <!-- Светли региони -->
+    <g class="light-regions">
+        <!-- Видин -->
+        <path class="region" d="M100,50 h120 v80 h-120 z"/>
+        <text class="region-name" x="130" y="90">Видин</text>
+
+        <!-- Монтана -->
+        <path class="region" d="M220,50 h120 v80 h-120 z"/>
+        <text class="region-name" x="250" y="90">Монтана</text>
+
+        <!-- Плевен -->
+        <path class="region" d="M340,50 h120 v80 h-120 z"/>
+        <text class="region-name" x="370" y="90">Плевен</text>
+
+        <!-- Русе -->
+        <path class="region" d="M460,50 h120 v80 h-120 z"/>
+        <text class="region-name" x="500" y="90">Русе</text>
+
+        <!-- Силистра -->
+        <path class="region" d="M580,50 h120 v80 h-120 z"/>
+        <text class="region-name" x="610" y="90">Силистра</text>
+
+        <!-- Добрич -->
+        <path class="region" d="M700,50 h120 v80 h-120 z"/>
+        <text class="region-name" x="730" y="90">Добрич</text>
+
+        <!-- Варна -->
+        <path class="region" d="M700,130 h120 v80 h-120 z"/>
+        <text class="region-name" x="730" y="170">Варна</text>
+
+        <!-- Шумен -->
+        <path class="region" d="M580,130 h120 v80 h-120 z"/>
+        <text class="region-name" x="610" y="170">Шумен</text>
+
+        <!-- Търговище -->
+        <path class="region" d="M460,130 h120 v80 h-120 z"/>
+        <text class="region-name" x="480" y="170">Търговище</text>
+
+        <!-- Ловеч -->
+        <path class="region" d="M340,130 h120 v80 h-120 z"/>
+        <text class="region-name" x="370" y="170">Ловеч</text>
+
+        <!-- Враца -->
+        <path class="region" d="M220,130 h120 v80 h-120 z"/>
+        <text class="region-name" x="250" y="170">Враца</text>
+
+        <!-- Хасково -->
+        <path class="region" d="M460,290 h120 v80 h-120 z"/>
+        <text class="region-name" x="490" y="330">Хасково</text>
+
+        <!-- Кърджали -->
+        <path class="region" d="M460,370 h120 v80 h-120 z"/>
+        <text class="region-name" x="490" y="410">Кърджали</text>
+
+        <!-- Благоевград -->
+        <path class="region" d="M100,290 h120 v160 h-120 z"/>
+        <text class="region-name" x="110" y="370">Благоевград</text>
+
+        <!-- Кюстендил -->
+        <path class="region" d="M100,210 h120 v80 h-120 z"/>
+        <text class="region-name" x="110" y="250">Кюстендил</text>
+
+        <!-- Перник -->
+        <path class="region" d="M100,130 h120 v80 h-120 z"/>
+        <text class="region-name" x="130" y="170">Перник</text>
+
+        <!-- Сливен -->
+        <path class="region" d="M580,210 h120 v80 h-120 z"/>
+        <text class="region-name" x="610" y="250">Сливен</text>
+
+        <!-- Ямбол -->
+        <path class="region" d="M580,290 h120 v80 h-120 z"/>
+        <text class="region-name" x="610" y="330">Ямбол</text>
+    </g>
+
+    <!-- Тъмни региони -->
+    <g class="dark-regions">
+        <!-- София -->
+        <path class="region-dark" d="M220,210 h120 v80 h-120 z"/>
+        <text class="region-name dark-region-name" x="250" y="250">София</text>
+
+        <!-- Пазарджик -->
+        <path class="region-dark" d="M340,210 h120 v80 h-120 z"/>
+        <text class="region-name dark-region-name" x="360" y="250">Пазарджик</text>
+
+        <!-- Пловдив -->
+        <path class="region-dark" d="M340,290 h120 v80 h-120 z"/>
+        <text class="region-name dark-region-name" x="370" y="330">Пловдив</text>
+
+        <!-- Стара Загора -->
+        <path class="region-dark" d="M460,210 h120 v80 h-120 z"/>
+        <text class="region-name dark-region-name" x="470" y="250">Стара Загора</text>
+
+        <!-- Сливен -->
+        <path class="region-dark" d="M580,210 h120 v80 h-120 z"/>
+        <text class="region-name dark-region-name" x="610" y="250">Сливен</text>
+
+        <!-- Ямбол -->
+        <path class="region-dark" d="M580,290 h120 v80 h-120 z"/>
+        <text class="region-name dark-region-name" x="610" y="330">Ямбол</text>
+
+        <!-- Бургас -->
+        <path class="region-dark" d="M700,210 h120 v160 h-120 z"/>
+        <text class="region-name dark-region-name" x="730" y="290">Бургас</text>
+    </g>
+
+    <!-- Маркер за Бургас -->
+    <circle class="marker" cx="760" cy="290" r="8"/>
+</svg> 
